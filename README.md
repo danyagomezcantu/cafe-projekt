@@ -9,6 +9,8 @@ Name of the coffee shop: Lemon & Lime Lounge
 - Hendrik Runde
 - Dalila Mejri
 
+![Example of Character Rigging](kaffeebar-projekt/blob/main/models/Human%20Character%20Rigging.png)
+
 ## Featureliste
   
 - Blender Modelle (Danya Carolina Gómez Cantú):
