@@ -1,7 +1,8 @@
-# CGAProject: Café-Projekt
+# CGAProject
 
 ## Projektname
-Lemon & Lime Lounge
+Café/Kaffeebar Projekt
+Name of the coffee shop: Lemon & Lime Lounge
 
 ## Teammitglieder
 - Danya Carolina Gómez Cantú
