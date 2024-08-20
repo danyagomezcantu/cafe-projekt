@@ -1,6 +1,8 @@
 # CGAProject
 
 ## Projektname: Café Gummersbach
+
+![Café Gummersbach's Banner](images/Caf%C3%A9%20Gummersbach_Banner.png)
   
 Unser Projekt ist ein gemütliches, cartoonhaftes Café-Spiel, bei dem die Benutzer die Rolle von Baristas übernehmen. Wir möchten ein ansprechendes und spielerisches Erlebnis bieten, indem wir durch detaillierte Texturen und Beleuchtung die visuelle Attraktivität betonen. Das Spiel spielt in einem lebendigen, stilisierten Café mit einer warmen und einladenden Atmosphäre. Die Umgebung umfasst eine Kaffeebar, einen Sitzbereich und verschiedene dekorative Elemente. Charaktere, einschließlich der Kunden und des Baristas, sind mit einem cartoonhaften Design gestaltet, das zum spielerischen Thema passt.  
 
@@ -9,7 +11,7 @@ Unser Projekt ist ein gemütliches, cartoonhaftes Café-Spiel, bei dem die Benut
 - Hendrik Runde
 - Dalila Mejri
 
-![Example of Character Rigging](models/Human%20Character%20Rigging.png)
+![Example of Character Rigging](images/Human%20Character%20Rigging.png)
 
 ## Featureliste
   
