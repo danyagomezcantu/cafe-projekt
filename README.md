@@ -1,7 +1,6 @@
 # CGAProject
 
-## Projektname
-[Pending] {Café/Kaffeebar Projekt  / Name of the coffee shop: Lemon & Lime Lounge/Café Lounge}
+## Projektname: Café Gummersbach
   
 Unser Projekt ist ein gemütliches, cartoonhaftes Café-Spiel, bei dem die Benutzer die Rolle von Baristas übernehmen. Wir möchten ein ansprechendes und spielerisches Erlebnis bieten, indem wir durch detaillierte Texturen und Beleuchtung die visuelle Attraktivität betonen. Das Spiel spielt in einem lebendigen, stilisierten Café mit einer warmen und einladenden Atmosphäre. Die Umgebung umfasst eine Kaffeebar, einen Sitzbereich und verschiedene dekorative Elemente. Charaktere, einschließlich der Kunden und des Baristas, sind mit einem cartoonhaften Design gestaltet, das zum spielerischen Thema passt.  
 
