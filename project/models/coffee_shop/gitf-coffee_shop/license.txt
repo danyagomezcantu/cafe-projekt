@@ -1,0 +1,8 @@
+Model Information:
+* title:	Coffee Shop
+* source:	https://sketchfab.com/3d-models/coffee-shop-14ef95fd440449c0b1996a456b538649
+* author:	Rafael Rodrigues (https://sketchfab.com/RafaelBR873D)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
