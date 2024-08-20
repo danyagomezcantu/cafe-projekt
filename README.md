@@ -11,16 +11,16 @@ Unser Projekt ist ein gemütliches, cartoonhaftes Café-Spiel, bei dem die Benut
 - Hendrik Runde
 - Dalila Mejri
 
-![Example of Character Rigging](images/Human%20Character%20Rigging.png)
-
 ## Featureliste
   
 - Blender Modelle (Danya Carolina Gómez Cantú):
   
-  - Charaktermodellierung: Erstellung von 3D-Charaktermodellen für die Baristas (Limette und Lemon) und die Kunden im Café. Die Modelle wurden in Blender entworfen, texturiert und rigged.
+  - Charaktermodellierung: Erstellung von 3D-Charaktermodellen für die Baristas und die Kunden im Café. Die Modelle wurden in Blender entworfen, texturiert und rigged.
   - Umgebungsmodellierung: Anpassung und Implementierung der Kaffeebar-Umgebung, einschließlich Sitzbereichen, Theken, und dekorativen Elementen.
   - Texturierung und Beleuchtung: Detaillierte Texturierung der Café-Umgebung und Charaktere, um einen stilisierten, cartoonhaften Look zu erreichen. Beleuchtungsszenarien wurden ebenfalls in Blender eingerichtet, um die warme und einladende Atmosphäre des Cafés zu unterstreichen.
   - Rigging und Animationen: Erstellung von Riggs für die Charaktermodelle, einschließlich Bewegungen für einfache Aktionen wie Gehen, Interaktionen mit Objekten, das Servieren von Kaffee und das Halten von Getränken.
+ 
+![Example of Character Rigging](images/Human%20Character%20Rigging.png)
   
 - Spielmechanik (Hendrik Runde und Dalila Mejri):
   
