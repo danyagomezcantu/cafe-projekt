@@ -1,32 +1,53 @@
-#General
-## MacOS
+# ignore DS_Store
 .DS_Store
-### Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
 
-## Windows
-Thumbs.db
-Thumbs.db:encryptable
-Desktop.ini
+# ignore all files in .idea
+.idea/
+/confluence/target
+/dependencies/repo
+/android.tests.dependencies
+/dependencies/android.tests.dependencies
+/dist
+/local
+/gh-pages
+/ideaSDK
+/clionSDK
+/android-studio/sdk
+out/
+/tmp
+/intellij
+workspace.xml
+*.versionsBackup
+/idea/testData/debugger/tinyApp/classes*
+/jps-plugin/testData/kannotator
+/js/js.translator/testData/out/
+/js/js.translator/testData/out-min/
+/js/js.translator/testData/out-pir/
+.gradle/
+gradle/
+gradle.properties
+gradlew
+gradlew.bat
+settings.gradle
+build/
+!**/src/**/build
+!**/test/**/build
+*.iml
+!**/testData/**/*.iml
+.idea/
+node_modules/
+.rpt2_cache/
+libraries/tools/kotlin-test-js-runner/lib/
+local.properties
+buildSrcTmp/
+distTmp/
+outTmp/
+/test.output
+/kotlin-native/dist
+kotlin-ide/
 
-#Dev specific
-## Compiled class file
-*.class
-build
-.gradle
+# ignore VSC directory
+.vscode/
 
-## Log file
-*.log
-
-## Package Files
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# general exception for asset folders
+!assets/

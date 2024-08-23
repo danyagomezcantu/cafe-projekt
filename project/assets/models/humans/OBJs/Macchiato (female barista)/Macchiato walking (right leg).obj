@@ -1,6 +1,6 @@
 # Blender 4.2.0
 # www.blender.org
-mtllib Macchiato walking (right leg).mtl
+mtllib macchiato_walking_right_leg.mtl
 o Cube.001
 v 0.403420 1.987726 0.365000
 v 0.427550 2.876316 0.389884
