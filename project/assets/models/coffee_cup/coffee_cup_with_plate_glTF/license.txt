@@ -1,0 +1,11 @@
+Model Information:
+* title:	Coffee cup with plate
+* source:	https://sketchfab.com/3d-models/coffee-cup-with-plate-c3132a723f434ce2b94e2e563420ef7a
+* author:	Elen (https://sketchfab.com/Kitty999)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Coffee cup with plate" (https://sketchfab.com/3d-models/coffee-cup-with-plate-c3132a723f434ce2b94e2e563420ef7a) by Elen (https://sketchfab.com/Kitty999) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
