@@ -1,0 +1,199 @@
+[33mcommit 622eaf0275d1e522ce079e6452387e5a9ec73ff7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 12:52:02 2024 +0200
+
+    Removed blend file for cafe gummersbach model.
+
+[33mcommit 3d7f6c0ebe9972f1afd0a5da6fe31adc8bf6bc3a[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 12:41:43 2024 +0200
+
+    Updated face assets and models for Emilia and Macchiato, as well as README banner
+
+[33mcommit 24dd1198dd83089ace87c051029aa72b555b6cf2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 11:51:04 2024 +0200
+
+    Added face assets for Brioche, Emilia, Hans, Macchiato, and Sophie. Included OBJs for Brioche and Macchiato.
+
+[33mcommit 506c4bfd9125df30ffbbacf64969838642a2a876[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 11:22:05 2024 +0200
+
+    Added face design assets and updated human models
+
+[33mcommit 1d4868cfb148eff982348edd5138eccfe96ffc8b[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 10:59:15 2024 +0200
+
+    Added Brioche walking with coffee cup (left leg) OBJ file.
+
+[33mcommit c025c902a63d4bd4248d37067eb84b26c4859494[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 09:10:17 2024 +0200
+
+    Added coffee cup with plate model, as well as human models with poses.
+
+[33mcommit 91149c9ab12651bc39ac02088be0cb6b34b0fd54[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 08:58:53 2024 +0200
+
+    Added Blender human models for the cafe project
+
+[33mcommit fe0327cb3c5e997ada11d46cf945e38a53c781c0[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Fri Aug 23 04:01:38 2024 +0200
+
+    Face design and human model assets
+
+[33mcommit 41df2f26442d17e5a9226c80a1029a6f65b49351[m
+Merge: be83d0c 4ccaaa4
+Author: HendrikRunde <92579916+HendrikRunde@users.noreply.github.com>
+Date:   Thu Aug 22 12:47:35 2024 +0200
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit be83d0c46be62156d4f35356bff48fc75f5b5c03[m
+Author: HendrikRunde <92579916+HendrikRunde@users.noreply.github.com>
+Date:   Thu Aug 22 12:21:32 2024 +0200
+
+    Added code
+
+[33mcommit 4ccaaa44a2b508d4afae97a0030f6993d8250f1b[m
+Merge: 24997d1 2a6867a
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Thu Aug 22 12:09:20 2024 +0200
+
+    Merge branch 'main' of https://github.com/danyagomezcantu/cafe-projekt
+
+[33mcommit 24997d1ba02297173507c27af566859efc09251f[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Thu Aug 22 12:08:35 2024 +0200
+
+    Added folder for code, edited barista models
+
+[33mcommit 2a6867a19bf4c90088adcb0497a40e291f77bd2d[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 20 15:11:57 2024 +0200
+
+    Update README.md
+
+[33mcommit 4c607e266072ea75f9482c7c6423ff25ae4491ac[m
+Author: danyagomezcantu <danyacgc@gmail.com>
+Date:   Tue Aug 20 12:56:57 2024 +0200
+
+    Added initial Blender models and project documentation
+
+[33mcommit 3076871532e2283246f0ab63af844d37bd6d6e4d[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 20 12:38:32 2024 +0200
+
+    Update README.md
+
+[33mcommit 7bc6b267f3c094da3d7f6ae2d36de2b5181fa40e[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 20 12:37:37 2024 +0200
+
+    Add files via upload
+
+[33mcommit b4d00f1a7e1a5342ca508eb0e4015c2c15df29e4[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 20 12:37:14 2024 +0200
+
+    Create README.md
+
+[33mcommit bfe57c32eab52f11ad90d63728c5e54844077fb7[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 20 12:35:47 2024 +0200
+
+    Delete models directory
+
+[33mcommit b953142b181fc909c38fb7084078c79f048185db[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 20 12:33:37 2024 +0200
+
+    Update README.md
+
+[33mcommit e7a4c00075e74081208c8ef0905ae295943635ee[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 14:12:01 2024 +0200
+
+    Update README.md
+
+[33mcommit 9b8a04769f8d99f98c9dcc71aa9576020d8da666[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:38:01 2024 +0200
+
+    Update README.md
+
+[33mcommit 7694bd3e088b0cf35d3252770c827766bf391b5f[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:27:55 2024 +0200
+
+    Update README.md
+
+[33mcommit ada11454ae08e451b3a2f1f9add1847a02eb0716[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:26:22 2024 +0200
+
+    Update README.md
+
+[33mcommit 5898fe517fe2b2d0acebcced47caa03a6957a8ef[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:26:00 2024 +0200
+
+    Update README.md
+
+[33mcommit 43a111f9d13fa9521b57cb4a0b5cc540a6036a7e[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:24:40 2024 +0200
+
+    Add files via upload
+
+[33mcommit 99322a8e2932375ba6c562a7c530924e058671a3[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:22:15 2024 +0200
+
+    Create README.md
+
+[33mcommit a3b00d0f48f56ed3a04702554bc2ad398a19312c[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:13:36 2024 +0200
+
+    Update README.md
+
+[33mcommit 064b846e0a99b18eb65fe2a3cf76bfaf061935c7[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 13:13:24 2024 +0200
+
+    Update README.md
+
+[33mcommit 5a7909230770b6640cc28e3dd0f4af9e94e5a167[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 12:08:30 2024 +0200
+
+    Update README.md
+
+[33mcommit 9bfddd14346661f577638a642f874ba266a1ce13[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 12:07:58 2024 +0200
+
+    Update README.md
+
+[33mcommit 5c39e4c28e56de4d525962dbb3f50ad9f2cf669f[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 12:07:42 2024 +0200
+
+    Update README.md
+
+[33mcommit 60db68c614bde30dcb4672253bd9d49df8cde5c0[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 12:00:12 2024 +0200
+
+    Update README.md
+
+[33mcommit 9d77beeb2198a038f8a25e68b0fbd74b18b97f8d[m
+Author: danyagomezcantu <111596636+danyagomezcantu@users.noreply.github.com>
+Date:   Tue Aug 13 11:56:58 2024 +0200
+
+    Initial commit
