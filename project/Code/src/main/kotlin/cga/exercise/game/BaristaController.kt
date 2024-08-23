@@ -1,8 +1,7 @@
 package cga.exercise.game
 import org.joml.Vector3f
 import org.lwjgl.glfw.GLFW.*
-
-class Controller {
+class BaristaController {
     private var position = Vector3f(0f, 0f, 0f)
 
     fun updateInput(window: Long) {

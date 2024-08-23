@@ -73,7 +73,7 @@ abstract class GameWindow(
 
     //Constructors
     /**
-     * Initializes a game window object
+     * Initializes a project.Code.src.main.kotlin.cga.exercise.game window object
      * @param width         Desired window width
      * @param height        Desired window height
      * @param fullscreen    Fullscreen mode
@@ -213,15 +213,15 @@ abstract class GameWindow(
     protected open fun shutdown() {}
 
     /**
-     * Is called for every game state update.
+     * Is called for every project.Code.src.main.kotlin.cga.exercise.game state update.
      * The method is called in fixed time steps if possible.
      * Make sure that one update call takes no longer than 1/updatefrequency seconds, otherwise the
-     * game slows down.
+     * project.Code.src.main.kotlin.cga.exercise.game slows down.
      *
      * This method should be used for physics simulations, where explicit solvers need small and constant
      * time steps to stay stable.
      *
-     * @param dt Time delta to advance the game state simulation. dt is 1/updatefrequency seconds, constant.
+     * @param dt Time delta to advance the project.Code.src.main.kotlin.cga.exercise.game state simulation. dt is 1/updatefrequency seconds, constant.
      */
     protected open fun update(dt: Float, t: Float) {}
 
@@ -284,7 +284,7 @@ abstract class GameWindow(
     }
     //public methods
     /**
-     * Enters the game loop and loops until an error occurs or quit() is called
+     * Enters the project.Code.src.main.kotlin.cga.exercise.game loop and loops until an error occurs or quit() is called
      */
     fun run() {
         start()

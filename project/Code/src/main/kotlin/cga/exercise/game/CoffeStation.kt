@@ -1,6 +1,6 @@
 package cga.exercise.game
 
-class CoffeeStation {
+class CoffeStation {
     private var progress = 0
 
     fun startPreparation() {
@@ -19,5 +19,9 @@ class CoffeeStation {
 
     fun isReady(): Boolean {
         return progress >= 100
+    }
+
+    fun completeOrder(customerId: Int) {
+        println("Getränk für Kunde $customerId fertiggestellt")
     }
 }
