@@ -16,105 +16,85 @@ import org.lwjgl.opengl.GL30.*
 import cga.exercise.components.geometry.Material
 import cga.exercise.components.light.PointLight
 import cga.exercise.components.light.SpotLight
-import org.joml.Vector3d
-import org.joml.Vector3dc
-import org.joml.Vector3i
-import org.joml.Vector3ic
-import kotlin.math.sin
-
 
 class Scene(private val window: GameWindow) {
 
-    //neuer Tron-Shader
-    private val staticShader: ShaderProgram =
-        ShaderProgram(
-            "assets/shaders/tron_vert.glsl",
-            "assets/shaders/tron_frag.glsl"
-        )
+    // Shader program
+    private val staticShader: ShaderProgram = ShaderProgram(
+        "assets/shaders/tron_vert.glsl",
+        "assets/shaders/tron_frag.glsl"
+    )
 
-    private val floorRotation: Float = (90.0f * Math.PI / 180.0f).toFloat()
-    private val floorScale: Float = 0.03f
-    private val sphereScale: Float = 0.5f
+    // Renderables
+    private lateinit var skyboxRenderable: Renderable
+    private lateinit var coffeeShopRenderable: Renderable
+    private lateinit var coffeeCupRenderable: Renderable
+    private lateinit var brioche: Renderable
+    private lateinit var hans: Renderable
+    private lateinit var briocheWithCoffee: Renderable
+    private lateinit var hansWithCoffee: Renderable
 
-    lateinit var groundRenderable: Renderable
-    lateinit var sphereRenderable: Renderable
-    private val lightCycle: Renderable?
-    lateinit var camera: TronCamera
+    // Camera
+    private lateinit var camera: TronCamera
 
-    lateinit var spotLight : SpotLight
-
-    lateinit var  PointLight0 : PointLight
-    lateinit var  PointLight1 : PointLight
-    lateinit var  PointLight2 : PointLight
-    lateinit var  PointLight3 : PointLight
-
-    lateinit var pointLights: Array<PointLight>
+    // SpotLight
+    private lateinit var spotLight: SpotLight
 
     init {
+        // Initialize models and camera
+        initializeModels()
+        initializeCamera()
 
-        // Load ground object
-        val resGround = OBJLoader.loadOBJ("assets/models/ground.obj")
-        val objGround = resGround.objects[0].meshes[0]
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f)
+        enableFaceCulling(GL_CCW, GL_BACK)
+        enableDepthTest(GL_LEQUAL)
+    }
 
-        // Load sphere object
-        val resSphere = OBJLoader.loadOBJ("assets/models/sphere.obj")
-        val objSphere = resSphere.objects[0].meshes[0]
+    private fun initializeModels() {
+        // Load models
+        skyboxRenderable = loadModel("assets/models/skybox/Skybox.obj")
+        coffeeShopRenderable = loadModel("assets/models/coffee_shop/coffee_shop.obj")
+        coffeeCupRenderable = loadModel("assets/models/coffee_cup/coffee_cup_obj.obj")
+        brioche = loadModel("assets/models/humans/OBJs/brioche_male_barista/brioche_with_empty_hand_or_working.obj")
+        hans = loadModel("assets/models/humans/OBJs/hans_client/hans_sitting_waiting.obj")
+        briocheWithCoffee = loadModel("assets/models/humans/OBJs/brioche_male_barista/brioche_standing_smiling_with_coffee.obj")
+        hansWithCoffee = loadModel("assets/models/humans/OBJs/hans_client/hans_sitting_happy_with_coffee.obj")
 
+        // Add models to the scene
+        skyboxRenderable.parent = null
+        coffeeShopRenderable.parent = null
+        coffeeCupRenderable.parent = null
+        brioche.parent = null
+        hans.parent = null
+    }
 
-        var textureDiff = Texture2D("assets/textures/ground_diff.png",true) //TEXTUREi(i=0)
-        textureDiff.setTexParams(GL_REPEAT,GL_REPEAT, GL_LINEAR_MIPMAP_NEAREST, GL_NEAREST)
-        var textureEmit = Texture2D("assets/textures/ground_emit.png",true) //TEXTUREi(i=1)
-        textureEmit.setTexParams(GL_REPEAT,GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_NEAREST)
-        var textureSpec = Texture2D("assets/textures/ground_Spec.png",true) //TEXTUREi(i=2)
-        textureSpec.setTexParams(GL_REPEAT,GL_REPEAT, GL_LINEAR_MIPMAP_NEAREST, GL_NEAREST)
+    private fun initializeCamera() {
+        camera = TronCamera(parent = brioche)
+        camera.rotateLocal(-org.joml.Math.toRadians(35.0f), 0.0f, 0.0f)
+        camera.translateLocal(Vector3f(0.0f, 0.0f, 4.0f))
+    }
 
-        var groundMaterial = Material(textureDiff, textureEmit, textureSpec, 60.0f, Vector2f(64.0f), Vector3f(0f,250f,0f));
+    private fun loadModel(path: String): Renderable {
+        val res = OBJLoader.loadOBJ(path)
+        val obj = res.objects[0].meshes[0]
 
-        // Define vertex attributes for the sphere and ground
+        val textureDiff = Texture2D("assets/textures/texture.png", true)
+        val textureEmit = Texture2D("assets/textures/texture.png", true)
+        val textureSpec = Texture2D("assets/textures/texture.png", true)
+
+        textureDiff.setTexParams(GL_REPEAT, GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR)
+        textureEmit.setTexParams(GL_REPEAT, GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR)
+        textureSpec.setTexParams(GL_REPEAT, GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR)
+
+        val material = Material(textureDiff, textureEmit, textureSpec, 60.0f, Vector2f(64.0f), Vector3f(0f, 250f, 0f))
+
         val attrPos = VertexAttribute(3, GL_FLOAT, 32, 0)
         val attrTC = VertexAttribute(2, GL_FLOAT, 32, 12)
         val attrNorm = VertexAttribute(3, GL_FLOAT, 32, 20)
         val objAttributes = arrayOf(attrPos, attrTC, attrNorm)
 
-        lightCycle = ModelLoader.loadModel(
-            "assets/Light Cycle/Light Cycle/HQ_Movie cycle.obj",
-            org.joml.Math.toRadians(-90.0f),
-            org.joml.Math.toRadians(90.0f),
-            0.0f
-        )
-
-
-        lightCycle?.scaleLocal(Vector3f(0.8f))
-
-        //Define meshes
-        val groundMesh = Mesh(objGround.vertexData, objGround.indexData, objAttributes, groundMaterial)
-        val sphereMesh = Mesh(objSphere.vertexData, objSphere.indexData, objAttributes)
-
-        groundRenderable = Renderable(mutableListOf(groundMesh))
-        sphereRenderable = Renderable(mutableListOf(sphereMesh))
-
-        //Eckpunktlichter
-        PointLight0 = PointLight(Vector3f(-15.0f, 1.0f, 15.0f), Vector3f(0f, 255f,0f), parent = null)
-        PointLight1=  PointLight(Vector3f(-15.0f, 1.0f, -15.0f), Vector3f(255f, 255f,0f), parent = null)
-        PointLight2 = PointLight(Vector3f(15.0f, 1.0f, -15.0f), Vector3f(0f, 255f,255f), parent = null)
-        PointLight3 = PointLight(Vector3f(15.0f, 1.0f, 15.0f), Vector3f(255f, 0f,0f), parent = null)
-
-        //Scheinwerfer
-        spotLight = SpotLight(Vector3f(0F,2F,-2F), Vector3f(100F,100F,100F),innerCone = 10.0f,
-            outerCone = 50.0f,parent = lightCycle)
-
-
-        // Camera
-        camera = TronCamera(parent = lightCycle)
-
-        // Kamera umpositionieren
-        camera.rotateLocal(org.joml.Math.toRadians(-35.0f),0.0f, 0.0f)
-        camera.translateLocal(Vector3f(0.0f, 0.0f,4.0f))
-
-        enableFaceCulling(GL_CCW, GL_BACK)
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f)
-        enableDepthTest(GL_LEQUAL)
-
+        val mesh = Mesh(obj.vertexData, obj.indexData, objAttributes, material)
+        return Renderable(mutableListOf(mesh))
     }
 
     fun render(dt: Float, t: Float) {
@@ -122,62 +102,69 @@ class Scene(private val window: GameWindow) {
 
         staticShader.use()
 
-        // Update camera matrices
+        // Bind the camera to the shader
         camera.bind(staticShader)
 
-        spotLight.bind(staticShader, "spotLight", camera.getCalculateViewMatrix())
-
-        PointLight0.bind(staticShader, 0)
-        PointLight1.bind(staticShader, 1)
-        PointLight2.bind(staticShader, 2)
-        PointLight3.bind(staticShader, 3)
-
-        // Render objects
-        groundRenderable.render(staticShader)
-        lightCycle?.render(staticShader)
+        // Render the scene objects
+        skyboxRenderable.render(staticShader)
+        coffeeShopRenderable.render(staticShader)
+        coffeeCupRenderable.render(staticShader)
+        brioche.render(staticShader)
+        hans.render(staticShader)
     }
 
     fun update(dt: Float, t: Float) {
-
-        if(window.getKeyState(GLFW_KEY_W)) {
-            lightCycle?.translateLocal(Vector3f(0f, 0f, -5f * dt))
-            if(window.getKeyState(GLFW_KEY_A))
-                lightCycle?.rotateLocal(0f, 5f * dt, 0f)
-            if(window.getKeyState(GLFW_KEY_D))
-                lightCycle?.rotateLocal(0f, -5f * dt, 0f)
+        if (window.getKeyState(GLFW_KEY_W)) {
+            brioche.translateLocal(Vector3f(0f, 0f, -5f * dt))
+            if (window.getKeyState(GLFW_KEY_A)) brioche.rotateLocal(0f, 5f * dt, 0f)
+            if (window.getKeyState(GLFW_KEY_D)) brioche.rotateLocal(0f, -5f * dt, 0f)
         }
-        if(window.getKeyState(GLFW_KEY_S)) {
-            lightCycle?.translateLocal(Vector3f(0f, 0f, 1.5f * dt))
-            if(window.getKeyState(GLFW_KEY_A))
-                lightCycle?.rotateLocal(0f, -1.5f * dt, 0f)
-            if(window.getKeyState(GLFW_KEY_D))
-                lightCycle?.rotateLocal(0f, 1.5f * dt, 0f)
+        if (window.getKeyState(GLFW_KEY_S)) {
+            brioche.translateLocal(Vector3f(0f, 0f, 1.5f * dt))
+            if (window.getKeyState(GLFW_KEY_A)) brioche.rotateLocal(0f, -1.5f * dt, 0f)
+            if (window.getKeyState(GLFW_KEY_D)) brioche.rotateLocal(0f, 1.5f * dt, 0f)
         }
 
-
-        val redPart = ((sin(t) + 1.0f) / 2 * 255)
-        val greenPart = (((sin((t * 2)) + 1f) / 2) * 255)
-        val bluePart = ((sin((t * 3)) + 1f) / 2f * 255)
-
-        lightCycle?.meshes?.get(2)?.material?.emitColor = Vector3f(redPart, greenPart, bluePart)
-        spotLight.lightColor = Vector3f (redPart, greenPart, bluePart)
-
-
-
+        if (window.getKeyState(GLFW_KEY_P)) {
+            switchBriocheModel()
+        }
+        if (window.getKeyState(GLFW_KEY_L)) {
+            switchHansModel()
+        }
     }
+
+    private fun switchBriocheModel() {
+        // Save the position and rotation
+        val position = brioche.getWorldPosition()
+        val yaw = brioche.getYaw()
+        val pitch = brioche.getPitch()
+        val roll = brioche.getRoll()
+
+        // Switch to the model with the coffee
+        brioche = briocheWithCoffee
+
+        // Apply the saved transformation
+        brioche.translateLocal(position)
+        brioche.rotateLocal(pitch, yaw, roll)
+        brioche.parent = null // Detach from the parent
+        camera.parent = brioche // Attach camera to the new model
+    }
+
+    private fun switchHansModel() {
+        // Save the position and rotation
+        hansWithCoffee.parent = null
+        hansWithCoffee.translateLocal(hans.getWorldPosition())
+        hansWithCoffee.rotateLocal(hans.getPitch(), hans.getYaw(), hans.getRoll())
+
+        // Replace the model
+        hans = hansWithCoffee
+    }
+
     fun onKey(key: Int, scancode: Int, action: Int, mode: Int) {}
 
-    var lastMousePosX : Double = 0.0
-    var lastMousePosY : Double = 0.0
     fun onMouseMove(xpos: Double, ypos: Double) {
-        val yaw = (lastMousePosX - xpos).toFloat() * 0.0002f
-        val pitch = 0.0f
-
-        camera.rotateAroundPoint(pitch, yaw, 0.0f, Vector3f(0.0f))
-        lastMousePosX = xpos
-        lastMousePosY = ypos
+        // Handle mouse movements here
     }
-
 
     fun cleanup() {}
 
@@ -185,7 +172,6 @@ class Scene(private val window: GameWindow) {
      * enables culling of specified faces
      * orientation: ordering of the vertices to define the front face
      * faceToCull: specifies the face that will be culled (back, front)
-     * Please read the docs for accepted parameters
      */
     fun enableFaceCulling(orientation: Int, faceToCull: Int) {
         glEnable(GL_CULL_FACE)
@@ -196,7 +182,6 @@ class Scene(private val window: GameWindow) {
     /**
      * enables depth test
      * comparisonSpecs: specifies the comparison that takes place during the depth buffer test
-     * Please read the docs for accepted parameters
      */
     fun enableDepthTest(comparisonSpecs: Int) {
         glEnable(GL_DEPTH_TEST)

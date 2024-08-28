@@ -141,6 +141,27 @@ open class Transformable(private var modelMatrix: Matrix4f = Matrix4f(), var par
         var worldModelMatrix = getWorldModelMatrix()
         return Vector3f(worldModelMatrix.m20(), worldModelMatrix.m21(), worldModelMatrix.m22()).normalize()
     }
+
+    /**
+     * Returns the yaw (rotation around Y-axis) from the rotation matrix.
+     */
+    fun getYaw(): Float {
+        return Math.atan2(modelMatrix.m20().toDouble(), modelMatrix.m00().toDouble()).toFloat()
+    }
+
+    /**
+     * Returns the pitch (rotation around X-axis) from the rotation matrix.
+     */
+    fun getPitch(): Float {
+        return Math.asin((-modelMatrix.m21()).toDouble()).toFloat()
+    }
+
+    /**
+     * Returns the roll (rotation around Z-axis) from the rotation matrix.
+     */
+    fun getRoll(): Float {
+        return Math.atan2(modelMatrix.m12().toDouble(), modelMatrix.m11().toDouble()).toFloat()
+    }
 }
 
 
