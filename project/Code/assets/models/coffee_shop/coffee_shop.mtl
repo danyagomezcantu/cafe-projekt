@@ -1,0 +1,262 @@
+# Blender 4.2.0 MTL File: 'coffee_shop.blend'
+# www.blender.org
+
+newmtl Bottle
+Ns 640.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Bottle - Color.jpg
+map_Ke C:/Bottle - Color.jpg
+
+newmtl Cardboard_+_Pictures
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Cardboard + Pictures - Color.jpg
+map_Ke C:/Cardboard + Pictures - Color.jpg
+
+newmtl Carpet_+_Door
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Carpet + Door - Color.jpg
+map_Ke C:/Carpet + Door - Color.jpg
+
+newmtl Coffee_Machine_+_Microwave
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Coffee Machine + Microwave - Color.jpg
+map_Ke C:/Coffee Machine + Microwave - Color.jpg
+
+newmtl Counter_+_Garden_Bed
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Counter + Garden Bed - Color.jpg
+map_Ke C:/Counter + Garden Bed - Color.jpg
+
+newmtl Curtains
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Curtain - Color.jpg
+map_Ke C:/Curtain - Color.jpg
+
+newmtl Floor_+_Roof
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Floor + Roof - Color.jpg
+map_Ke C:/Floor + Roof - Color.jpg
+
+newmtl Freezer
+Ns 250.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Freezer - Color.jpg
+map_Ke C:/Freezer - Color.jpg
+
+newmtl Glass_(No_Transparent)
+Ka 0.750000 0.750000 0.750000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 3
+map_Kd C:/Glass - Roughness.jpg
+map_Ns C:/Glass - Roughness.jpg
+
+newmtl Glass_(Transparent)
+Ka 0.750000 0.750000 0.750000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 6
+map_Kd C:/Glass - Roughness.jpg
+map_Ns C:/Glass - Roughness.jpg
+map_d C:/Glass - Roughness.jpg
+
+newmtl Kitchen_Counter
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Kitchen Counter - Color.jpg
+map_Ke C:/Kitchen Counter - Color.jpg
+
+newmtl Material.001
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Users/Danya/Downloads/[Danya].png
+
+newmtl Plant_A
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+illum 1
+map_Kd C:/Plant A - Color.png
+map_Ke C:/Plant A - Color.png
+map_d C:/Plant A - Color.png
+
+newmtl Plant_B
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ni 1.500000
+illum 2
+map_Kd C:/Plant B - Color.png
+map_Ke C:/Plant B - Color.png
+map_d C:/Plant B - Color.png
+
+newmtl Porcelain
+Ns 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Porcelain - Color.jpg
+map_Ke C:/Porcelain - Color.jpg
+
+newmtl Roof_Lamp
+Ns 250.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Roof Lamp - Color.jpg
+map_Ke C:/Roof Lamp - Color.jpg
+
+newmtl Spotlight_+_Wall_Lamp
+Ns 250.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Spotlight + Wall Lamp - Color.jpg
+map_Ke C:/Spotlight + Wall Lamp - Color.jpg
+
+newmtl Stool
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Stool - Color.jpg
+map_Ke C:/Stool - Color.jpg
+
+newmtl Table_A
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Table A - Color.jpg
+map_Ke C:/Table A - Color.jpg
+
+newmtl Table_B
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Table B - Color.jpg
+map_Ke C:/Table B - Color.jpg
+
+newmtl Table_C
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Table C - Color.jpg
+map_Ke C:/Table C - Color.jpg
+
+newmtl Table_D
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Table D - Color.jpg
+map_Ke C:/Table D - Color.jpg
+
+newmtl Wakk_Closet
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Wall Closet - Color.jpg
+map_Ke C:/Wall Closet - Color.jpg
+
+newmtl Wall_A
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Users/Danya/Downloads/fbx-coffee-shop/textures/Wall A - Color.png
+map_Ke C:/Users/Danya/Downloads/fbx-coffee-shop/textures/Wall A - Color.png
+
+newmtl Wall_B
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Wall B - Color.jpg
+map_Ke C:/Wall B - Color.jpg
+
+newmtl Windows
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 1
+map_Kd C:/Windows - Color.jpg
+map_Ke C:/Windows - Color.jpg
