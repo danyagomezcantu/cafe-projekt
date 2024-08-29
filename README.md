@@ -19,7 +19,6 @@ Unser Projekt ist ein gemütliches, cartoonhaftes Café-Spiel, bei dem die Benut
   - Umgebungsmodellierung: Anpassung und Implementierung der Kaffeebar-Umgebung, einschließlich Sitzbereichen, Theken, und dekorativen Elementen.
   - Texturierung und Beleuchtung: Detaillierte Texturierung der Café-Umgebung und Charaktere, um einen stilisierten, cartoonhaften Look zu erreichen. Beleuchtungsszenarien wurden ebenfalls in Blender eingerichtet, um die warme und einladende Atmosphäre des Cafés zu unterstreichen.
   - Rigging und Animationen: Erstellung von Riggs für die Charaktermodelle, einschließlich Bewegungen für einfache Aktionen wie Gehen, Interaktionen mit Objekten, das Servieren von Kaffee und das Halten von Getränken.
-  - Rendering: Finales Rendering der 3D-Szene in der Spiele-Engine. Die Kamera folgt dem Hauptcharakter, Brioche, und ermöglicht das Umschalten zwischen einer Egoperspektive und einer Third-Person-Ansicht, während sie nahtlos mit der Umgebung interagiert.
  
 ![Instructions](images/Instructions.png)
   
