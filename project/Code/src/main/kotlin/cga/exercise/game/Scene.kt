@@ -8,14 +8,12 @@ import cga.exercise.components.shader.ShaderProgram
 import cga.exercise.components.texture.Texture2D
 import cga.framework.GameWindow
 import cga.framework.OBJLoader
-import cga.framework.ModelLoader
 import org.joml.Vector2f
 import org.joml.Vector3f
-import org.lwjgl.glfw.GLFW.*
 import org.lwjgl.opengl.GL30.*
 import cga.exercise.components.geometry.Material
-import cga.exercise.components.light.PointLight
-import cga.exercise.components.light.SpotLight
+import cga.framework.ModelLoader
+import org.lwjgl.glfw.GLFW.*
 
 class Scene(private val window: GameWindow) {
 
@@ -36,9 +34,6 @@ class Scene(private val window: GameWindow) {
 
     // Camera
     private lateinit var camera: TronCamera
-
-    // SpotLight
-    private lateinit var spotLight: SpotLight
 
     init {
         // Initialize models and camera
@@ -78,15 +73,7 @@ class Scene(private val window: GameWindow) {
         val res = OBJLoader.loadOBJ(path)
         val obj = res.objects[0].meshes[0]
 
-        val textureDiff = Texture2D("assets/textures/texture.png", true)
-        val textureEmit = Texture2D("assets/textures/texture.png", true)
-        val textureSpec = Texture2D("assets/textures/texture.png", true)
-
-        textureDiff.setTexParams(GL_REPEAT, GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR)
-        textureEmit.setTexParams(GL_REPEAT, GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR)
-        textureSpec.setTexParams(GL_REPEAT, GL_REPEAT, GL_LINEAR_MIPMAP_LINEAR, GL_LINEAR)
-
-        val material = Material(textureDiff, textureEmit, textureSpec, 60.0f, Vector2f(64.0f), Vector3f(0f, 250f, 0f))
+        val material = loadMaterialFromMTL(path.replace(".obj", ".mtl"))
 
         val attrPos = VertexAttribute(3, GL_FLOAT, 32, 0)
         val attrTC = VertexAttribute(2, GL_FLOAT, 32, 12)
@@ -95,6 +82,44 @@ class Scene(private val window: GameWindow) {
 
         val mesh = Mesh(obj.vertexData, obj.indexData, objAttributes, material)
         return Renderable(mutableListOf(mesh))
+    }
+
+    private fun loadMaterialFromMTL(mtlPath: String): Material {
+        val defaultTexturePath = "C:\\Users\\Danya\\Documents\\GitHub\\cafe-projekt\\project\\code\\assets\\textures\\texture.png"
+        val defaultTexture = Texture2D(defaultTexturePath, true)
+
+        val mtlFile = java.io.File(mtlPath)
+        var diffuseTexture: Texture2D? = null
+        var emissiveTexture: Texture2D? = null
+        var specularTexture: Texture2D? = null
+
+        if (mtlFile.exists()) {
+            mtlFile.forEachLine { line ->
+                when {
+                    line.startsWith("map_Kd") -> {
+                        val textureFile = line.split(" ")[1].trim()
+                        diffuseTexture = Texture2D(textureFile, true)
+                    }
+                    line.startsWith("map_Ke") -> {
+                        val textureFile = line.split(" ")[1].trim()
+                        emissiveTexture = Texture2D(textureFile, true)
+                    }
+                    line.startsWith("map_Ks") -> {
+                        val textureFile = line.split(" ")[1].trim()
+                        specularTexture = Texture2D(textureFile, true)
+                    }
+                }
+            }
+        }
+
+        return Material(
+            diffuseTexture ?: defaultTexture,
+            emissiveTexture ?: defaultTexture,
+            specularTexture ?: defaultTexture,
+            60.0f,
+            Vector2f(64.0f),
+            Vector3f(0f, 250f, 0f)
+        )
     }
 
     fun render(dt: Float, t: Float) {
